@@ -20,5 +20,13 @@
     "core-js": "^3.6.5",
     "fractional": "^1.0.0",
     "regenerator-runtime": "^0.13.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscocaballero/Huddle-landing-page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/franciscocaballero/Huddle-landing-page/issues"
+  },
+  "homepage": "https://github.com/franciscocaballero/Huddle-landing-page#readme"
 }

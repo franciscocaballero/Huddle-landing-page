@@ -1,0 +1,155 @@
+   :root {
+       --clr-primary: #674baf;
+       --cl-secondary: #e882e8;
+       --cl-white: #fff;
+       --ff-primary: 'Poppins', sans-serif;
+       --ff-secondary: 'Open sans', sans-serif;
+   }
+
+   * {
+       box-sizing: border-box;
+   }
+
+   body,
+   h1,
+   h2,
+   h3,
+   p {
+       margin: 0;
+   }
+
+   html {
+       font-size: 16px;
+       border: 3px solid blue;
+       height: 100%;
+       width: 100%;
+       overflow: hidden;
+   }
+
+   body {
+       height: 100%;
+       width: 100%;
+       border: 3px solid red;
+       color: var(--cl-white);
+       background: url('../../images/bg-mobile.svg') var(--clr-primary) no-repeat top / 100%;
+   }
+
+   footer {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   //Typography 
+
+   h1,
+   h2,
+   h3,
+   h4 {
+       font-family: var(--ff-primary);
+       font-weight: 600;
+       font-size: 2rem;
+       margin-bottom: 1rem;
+       text-align: center;
+   }
+
+   p {
+       font-family: var(--ff-secondary);
+       font-weight: 400;
+       font-size: 1.4rem;
+       text-align: center;
+   }
+
+   // Images:
+   img {
+       display: block;
+       max-width: 100%;
+       max-height: 100%;
+   }
+
+   i {
+       border: 2px solid #fff;
+       border-radius: 50%;
+       font-size: 1.4rem;
+       color: white;
+       padding: .8rem;
+       cursor: pointer;
+
+   }
+
+   // Buttons:
+   .btn {
+       display: block;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       padding: 1.3rem 2rem;
+       width: 22rem;
+       font-family: var(--ff-primary);
+       font-size: 1.1rem;
+       font-weight: 400;
+       border: none;
+       border-radius: 3rem;
+       background-color: var(--cl-white);
+       color: var(--clr-primary);
+       box-shadow: 5px 8px 15px -4px #202020;
+       transition: 0.2s;
+       cursor: pointer;
+
+       &:hover {
+           background-color: var(--cl-secondary);
+           color: var(--cl-white);
+
+       }
+   }
+
+
+   .container {
+       height: min(90%, 90rem);
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       width: min(90%, 60rem);
+       margin-inline: auto;
+
+
+       border: 2px solid green;
+
+       &--narrow {
+           max-width: 30rem;
+       }
+   }
+
+   .text-align-center {
+       text-align: center;
+   }
+
+   .split {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+       border: 2px solid yellow;
+       height: min(55rem);
+
+   }
+
+   @media (min-width: 40rem) {
+       .split {
+           flex-direction: row;
+       }
+
+       .split>* {
+           flex-basis: 100%;
+       }
+
+       .split>*+* {
+           margin-left: 2rem;
+       }
+
+       body {
+           background: url('../../images/bg-desktop.svg') var(--clr-primary) no-repeat center / cover;
+           background-size: cover;
+           /*for safari we can add this sperately*/
+       }
+   }
