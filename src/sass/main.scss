@@ -19,29 +19,33 @@
    }
 
    html {
-       font-size: 16px;
-       border: 3px solid blue;
        height: 100%;
        width: 100%;
+       font-size: 16px;
        overflow: hidden;
    }
 
    body {
        height: 100%;
        width: 100%;
-       border: 3px solid red;
        color: var(--cl-white);
+       padding: 2rem 0;
        background: url('../../images/bg-mobile.svg') var(--clr-primary) no-repeat top / 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+
    }
 
    footer {
        display: flex;
        justify-content: center;
        align-items: center;
+       padding: 2rem 0;
+
    }
 
-   //Typography 
-
+   //Typography:
    h1,
    h2,
    h3,
@@ -50,21 +54,25 @@
        font-weight: 600;
        font-size: 2rem;
        margin-bottom: 1rem;
-       text-align: center;
    }
 
    p {
        font-family: var(--ff-secondary);
        font-weight: 400;
        font-size: 1.4rem;
+       margin-bottom: 2rem;
+       line-height: 2rem;
+   }
+
+   h2,
+   p {
        text-align: center;
    }
 
    // Images:
    img {
-       display: block;
        max-width: 100%;
-       max-height: 100%;
+       display: block;
    }
 
    i {
@@ -74,10 +82,16 @@
        color: white;
        padding: .8rem;
        cursor: pointer;
+       margin: .5rem;
+       transition: .2s;
 
+       &:hover {
+           border: 2px solid var(--cl-secondary);
+           color: var(--cl-secondary);
+       }
    }
 
-   // Buttons:
+   //Buttons:
    .btn {
        display: block;
        text-align: center;
@@ -99,30 +113,31 @@
        &:hover {
            background-color: var(--cl-secondary);
            color: var(--cl-white);
-
        }
    }
 
 
    .container {
-       height: min(90%, 90rem);
+       width: min(90%, 90rem);
+       margin-inline: auto;
+       border: 2px solid red;
+   }
+
+   .container--narrow {
+       max-width: 25rem;
+   }
+
+   .container-small {
+       display: flex;
        justify-content: center;
        align-items: center;
-       display: flex;
-       width: min(90%, 60rem);
-       margin-inline: auto;
-
-
-       border: 2px solid green;
-
-       &--narrow {
-           max-width: 30rem;
-       }
+       flex-direction: column;
    }
 
    .text-align-center {
        text-align: center;
    }
+
 
    .split {
        display: flex;
@@ -130,10 +145,14 @@
        justify-content: space-evenly;
        align-items: center;
        border: 2px solid yellow;
-       height: min(55rem);
+       padding: 3rem 0;
 
+       img {
+           margin-bottom: 1rem;
+       }
    }
 
+   // media query: 
    @media (min-width: 40rem) {
        .split {
            flex-direction: row;
@@ -151,5 +170,21 @@
            background: url('../../images/bg-desktop.svg') var(--clr-primary) no-repeat center / cover;
            background-size: cover;
            /*for safari we can add this sperately*/
+       }
+
+       footer {
+           justify-content: flex-end;
+           align-items: center;
+       }
+
+       .container-small {
+           display: flex;
+           justify-content: flex-start;
+           align-items: flex-start;
+       }
+
+       h2,
+       p {
+           text-align: left;
        }
    }
