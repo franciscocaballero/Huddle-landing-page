@@ -22,7 +22,6 @@
        height: 100%;
        width: 100%;
        font-size: 16px;
-       overflow: hidden;
    }
 
    body {
@@ -34,7 +33,6 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-
    }
 
    footer {
@@ -42,7 +40,6 @@
        justify-content: center;
        align-items: center;
        padding: 2rem 0;
-
    }
 
    //Typography:
@@ -76,10 +73,10 @@
    }
 
    i {
-       border: 2px solid #fff;
+       border: 2px solid var(--cl-white);
        border-radius: 50%;
        font-size: 1.4rem;
-       color: white;
+       color: var(--cl-white);
        padding: .8rem;
        cursor: pointer;
        margin: .5rem;
@@ -96,7 +93,6 @@
        display: block;
        text-align: center;
        text-decoration: none;
-       display: inline-block;
        padding: 1.3rem 2rem;
        width: 22rem;
        font-family: var(--ff-primary);
@@ -120,7 +116,6 @@
    .container {
        width: min(90%, 90rem);
        margin-inline: auto;
-       border: 2px solid red;
    }
 
    .container--narrow {
@@ -134,18 +129,12 @@
        flex-direction: column;
    }
 
-   .text-align-center {
-       text-align: center;
-   }
-
-
    .split {
        display: flex;
        flex-direction: column;
        justify-content: space-evenly;
        align-items: center;
-       border: 2px solid yellow;
-       padding: 3rem 0;
+       padding: 4rem 0;
 
        img {
            margin-bottom: 1rem;
@@ -174,11 +163,9 @@
 
        footer {
            justify-content: flex-end;
-           align-items: center;
        }
 
        .container-small {
-           display: flex;
            justify-content: flex-start;
            align-items: flex-start;
        }
@@ -186,5 +173,9 @@
        h2,
        p {
            text-align: left;
+       }
+
+       .btn {
+           width: 14rem;
        }
    }
